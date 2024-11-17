@@ -1,7 +1,10 @@
 {
   "name": "collection-libraries-vanilla",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "author": {
+    "name": "Joel Ocaño"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -19,6 +22,8 @@
   "dependencies": {
     "@plainsheet/core": "^0.7.0",
     "bulma": "^1.0.2",
+    "lit": "^3.2.1",
+    "lit-html": "^3.2.1",
     "markdown-it": "^14.1.0"
   }
 }

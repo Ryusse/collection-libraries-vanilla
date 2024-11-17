@@ -5,117 +5,22 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Collection libraries vanilla</title>
-    <link rel="stylesheet" href="./src/assets/scss/styles.scss" />
   </head>
   <body class="home__body">
-    <!-- <header>
-      <a class="button" href="blog/">Blog</a>
-    </header> -->
-    <main class="home__main layout layout--lg">
+    <main class="layout layout--lg">
+      <!-- Custom Element con Lit -->
+      <header-component></header-component>
+      <!-- Injectar Html con lit-html -->
+      <section data-character-list>
+        <h1 class="title is-1 mb-4">Lista de personajes</h1>
+      </section>
+    </main>
+    <!-- <default-root> </default-root> -->
+    <!-- <main class="home__main layout layout--lg">
       <section>
-        <!-- <button data-trigger-button class="button is-primary">click</button>
-        <div data-bottom-sheet-content>
-          <h1>Hello world</h1>
-        </div> -->
-
         <div id="loader">
           <div class="grid is-col-min-8 is-gap-4">
-            <div>
-              <figure class="image is-skeleton mb-4" style="height: 176px">
-                <img alt="Placeholder" src="https://placehold.co/128x128" />
-              </figure>
-              <div class="skeleton-lines">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            <div>
-              <figure class="image is-skeleton mb-4" style="height: 176px">
-                <img alt="Placeholder" src="https://placehold.co/128x128" />
-              </figure>
-              <div class="skeleton-lines">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            <div>
-              <figure class="image is-skeleton mb-4" style="height: 176px">
-                <img alt="Placeholder" src="https://placehold.co/128x128" />
-              </figure>
-              <div class="skeleton-lines">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            <div>
-              <figure class="image is-skeleton mb-4" style="height: 176px">
-                <img alt="Placeholder" src="https://placehold.co/128x128" />
-              </figure>
-              <div class="skeleton-lines">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            <div>
-              <figure class="image is-skeleton mb-4" style="height: 176px">
-                <img alt="Placeholder" src="https://placehold.co/128x128" />
-              </figure>
-              <div class="skeleton-lines">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            <div>
-              <figure class="image is-skeleton mb-4" style="height: 176px">
-                <img alt="Placeholder" src="https://placehold.co/128x128" />
-              </figure>
-              <div class="skeleton-lines">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            <div>
-              <figure class="image is-skeleton mb-4" style="height: 176px">
-                <img alt="Placeholder" src="https://placehold.co/128x128" />
-              </figure>
-              <div class="skeleton-lines">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            <div>
-              <figure class="image is-skeleton mb-4" style="height: 176px">
-                <img alt="Placeholder" src="https://placehold.co/128x128" />
-              </figure>
-              <div class="skeleton-lines">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
+            <skeleton-loader count="4"></skeleton-loader>
           </div>
         </div>
 
@@ -126,7 +31,8 @@
 
         <div id="contact"></div>
       </section>
-    </main>
+    </main> -->
     <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/components/header/index.js"></script>
   </body>
 </html>

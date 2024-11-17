@@ -4,7 +4,7 @@ const BASE_URL = "https://rickandmortyapi.com/api";
 
 export const apiService = async (endpoint, options = {}) => {
   try {
-    await delay(10000);
+    //await delay(10000);
     const response = await fetch(`${BASE_URL}${endpoint}`, {
       ...options,
       headers: {
