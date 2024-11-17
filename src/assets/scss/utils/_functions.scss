@@ -1,0 +1,46 @@
+@use "./variables" as *;
+
+@function color-swap($comparison-color,
+  $threshold: 40,
+  $dark-color: black,
+  $light-color: white) {
+  @if (lightness($comparison-color) > $threshold) {
+    @return $dark-color;
+  }
+
+  @else {
+    @return $light-color;
+  }
+}
+
+@function fluid($mobile, $desktop: null) {
+  @if $desktop ==null {
+    $desktop: $mobile;
+  }
+
+  @if get-unit($mobile)=="rem" {
+    $mobile: strip-unit($mobile) * $root-font-size;
+    $desktop: strip-unit($desktop) * $root-font-size;
+  }
+
+  $growth-ratio: 18;
+  $desktop-vw: calc($desktop / $growth-ratio);
+
+  @return m#{a}x(#{rem($mobile)}, #{$desktop-vw}vw);
+}
+
+@function get-unit($value) {
+  @return str-slice($value * 0 + "", 2, -1);
+}
+
+@function rem($px) {
+  @return #{calc($px / $root-font-size)}rem;
+}
+
+@function strip-unit($number) {
+  @if type-of($number)=="number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "collection-libraries-vanilla",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "fast-glob": "^3.3.2",
+    "sass": "^1.81.0",
+    "vite": "^5.4.10",
+    "vite-plugin-full-reload": "^1.0.5",
+    "vite-plugin-minify": "^2.0.1",
+    "vite-svg-sprite-wrapper": "^1.0.3"
+  },
+  "dependencies": {
+    "@plainsheet/core": "^0.7.0",
+    "bulma": "^1.0.2",
+    "markdown-it": "^14.1.0"
+  }
+}
