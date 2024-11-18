@@ -1,9 +1,6 @@
 import { apiService } from "@/services";
 import { html } from "lit-html";
 
-const data = await apiService("/character");
-const characters = data.results;
-
 const characterTemplate = (character) => html`
   <article class="card cell">
     <div class="card-image">
@@ -26,7 +23,7 @@ const characterTemplate = (character) => html`
     </div>
   </article>
 `;
-export const characterGridTemplate = html`
+export const characterGridTemplate = (characters) => html`
   <div class="grid is-col-min-8 is-gap-4">
     ${characters.map((character) => characterTemplate(character))}
   </div>

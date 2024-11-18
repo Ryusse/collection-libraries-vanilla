@@ -16,10 +16,8 @@ export class HeaderComponent extends LitElement {
 
   render() {
     return html`
-      <div class="grid is-col-min-8 is-gap-4">
-        ${links.map(
-          (link) => html` <a class="button is-primary">${link.title}</a> `
-        )}
+      <div class="header">
+        ${links.map((link) => html` <a class="button">${link.title}</a> `)}
       </div>
     `;
   }

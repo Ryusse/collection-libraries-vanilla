@@ -4,18 +4,35 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+    <script src="/pagefind/pagefind-ui.js" is:inline></script>
+    <link href="./src/assets/scss/styles.scss" rel="stylesheet" />
     <title>Collection libraries vanilla</title>
   </head>
   <body class="home__body">
     <main class="layout layout--lg">
-      <!-- Custom Element con Lit -->
-      <header-component></header-component>
+      <h1>Joel</h1>
+      <p>"Smartypants, double quotes" and 'single quotes'</p>
+
+      <div id="search"></div>
       <!-- Injectar Html con lit-html -->
       <section data-character-list>
         <h1 class="title is-1 mb-4">Lista de personajes</h1>
+        <h class="title" 2>worry</h>
       </section>
     </main>
-    <!-- <default-root> </default-root> -->
+
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        // @ts-ignore
+        new PagefindUI({
+          element: "#search",
+          debounceTimeoutMs: 500,
+          showEmptyFilters: false,
+          showSubResults: true,
+        });
+      });
+    </script>
     <!-- <main class="home__main layout layout--lg">
       <section>
         <div id="loader">
@@ -33,6 +50,5 @@
       </section>
     </main> -->
     <script type="module" src="./src/main.js"></script>
-    <script type="module" src="./src/components/header/index.js"></script>
   </body>
 </html>

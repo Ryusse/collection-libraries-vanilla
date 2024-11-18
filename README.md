@@ -2,3 +2,5 @@ Optimizar JS: https://medium.com/insiderengineering/javascript-performance-optim
 
 Bottom sheet: https://www.plainsheet.org/apis/vanilla-js
 Markdownit: https://www.npmjs.com/package/markdown-it, https://markdown-it.github.io/
+
+Pagefind: https://pagefind.app/

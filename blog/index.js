@@ -1,7 +1,4 @@
 import dummy from "./content.md";
-import { log } from "@/utils";
-
-log();
 
 document.querySelector("[data-content]").innerHTML = dummy;
 

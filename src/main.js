@@ -74,7 +74,13 @@ import { render } from "lit-html";
 import "./assets/scss/styles.scss";
 
 import { characterGridTemplate } from "./components/character";
+import { apiService } from "./services";
 
-const characterList = document.querySelector("[data-character-list]");
+export const initApp = async () => {
+  const characterList = document.querySelector("[data-character-list]");
+  const data = await apiService("/character");
 
-render(characterGridTemplate, characterList);
+  render(characterGridTemplate(data.results), characterList);
+};
+
+initApp();
