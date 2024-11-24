@@ -1,21 +1,24 @@
 @use "utils/functions" as a;
 @use "layouts/index" as b;
 
-@import "bulma/bulma.scss";
 
-:root {
-  --pagefind-ui-scale: 1;
-  --pagefind-ui-primary: #038ad8;
-  --pagefind-ui-text: #fff;
-  --pagefind-ui-background: #394e69;
-  --pagefind-ui-border: #eeeeee;
-  --pagefind-ui-tag: #eeeeee;
-  --pagefind-ui-border-width: 2px;
-  --pagefind-ui-border-radius: 99px;
-  --pagefind-ui-image-border-radius: 8px;
-  --pagefind-ui-image-box-ratio: 3 / 2;
-  --pagefind-ui-font: sans-serif;
-}
+
+// @import "bulma/bulma.scss";
+
+// :root {
+//   --pagefind-ui-scale: 1;
+//   --pagefind-ui-primary: #038ad8;
+//   --pagefind-ui-text: #fff;
+//   --pagefind-ui-background: #394e69;
+//   --pagefind-ui-border: #eeeeee;
+//   --pagefind-ui-tag: #eeeeee;
+//   --pagefind-ui-border-width: 2px;
+//   --pagefind-ui-border-radius: 99px;
+//   --pagefind-ui-image-border-radius: 8px;
+//   --pagefind-ui-image-box-ratio: 3 / 2;
+//   --pagefind-ui-font: sans-serif;
+
+// }
 
 
 // .bottom-sheet,

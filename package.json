@@ -21,10 +21,10 @@
   },
   "dependencies": {
     "@plainsheet/core": "^0.7.0",
-    "bulma": "^1.0.2",
     "lit": "^3.2.1",
     "lit-html": "^3.2.1",
     "markdown-it": "^14.1.0",
-     "pagefind": "^1.0.3"
+    "open-props": "^1.7.7",
+    "pagefind": "^1.0.3"
   }
 }
