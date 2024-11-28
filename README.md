@@ -4,3 +4,5 @@ Bottom sheet: https://www.plainsheet.org/apis/vanilla-js
 Markdownit: https://www.npmjs.com/package/markdown-it, https://markdown-it.github.io/
 
 Pagefind: https://pagefind.app/
+
+Open props: https://open-props.style

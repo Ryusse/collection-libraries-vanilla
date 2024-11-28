@@ -1,24 +1,3 @@
-/* the props */
-@import "open-props/style";
-
-/* optional imports that use the props */
-@import "open-props/normalize";
-@import "open-props/buttons";
-
-/* just light or dark themes */
-@import "open-props/normalize/dark";
-@import "open-props/buttons/dark";
-@import "open-props/normalize/light";
-@import "open-props/buttons/light";
-
-/* individual imports */
-@import "open-props/indigo";
-@import "open-props/easings";
-@import "open-props/animations";
-@import "open-props/sizes";
-@import "open-props/gradients";
-/* see PropPacks for the full list */
-
 :root {
   --primary: var(--indigo-7);
   --primary-content: var(--indigo-1);
@@ -62,10 +41,3 @@
     --body-font-family: var(--font-neo-grotesque);
   }
 }
-
-html {
-  background-color: var(--background);
-  color: var(--body-content);
-  font-family: var(--body-font-family);
-}
-

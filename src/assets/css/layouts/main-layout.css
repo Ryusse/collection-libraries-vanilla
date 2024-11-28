@@ -1,0 +1,32 @@
+.main-layout {
+  padding-block-start: var(--size-fluid-2);
+  overflow-x: hidden;
+  display: grid;
+  justify-items: flex-start;
+  grid-template-columns:var(--size-3) calc(100% - 2 * var(--size-3)) var(--size-3);
+
+  @media (--md-n-above) {
+    grid-template-columns: var(--size-8) calc(100% - 2* var(--size-8)) var(--size-8);
+  }
+
+  @media (--lg-n-above) {
+    grid-template-columns: var(--size-10) calc(100% - 2* var(--size-10)) var(--size-10);
+  }
+
+  @media (--xl-n-above) {
+    grid-template-columns: var(--size-12) calc(100% - 2* var(--size-12)) var(--size-12);
+  }
+
+  @media (--xxl-n-above) {
+    grid-template-columns: var(--size-14) calc(100% - 2* var(--size-14)) var(--size-14);
+  }
+
+  &>* {
+    grid-column: 2;
+  }
+
+  >.place-full {
+    width: 100%;
+    grid-column: 1 / -1
+  }
+}

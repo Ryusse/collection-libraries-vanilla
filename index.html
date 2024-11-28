@@ -4,45 +4,16 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-    <script src="/pagefind/pagefind-ui.js" is:inline></script> -->
+    <link rel="stylesheet" href="./src/assets/css/main.css" />
     <title>Collection libraries vanilla</title>
   </head>
-  <body class="home__body">
-    <main class="layout layout--lg">
-      <!-- <div id="search"></div> -->
-      <!-- Injectar Html con lit-html -->
-      <div id="app"></div>
-    </main>
-    <h1>asd</h1>
-
-    <!-- <script>
-      window.addEventListener("DOMContentLoaded", (event) => {
-        // @ts-ignore
-        new PagefindUI({
-          element: "#search",
-          debounceTimeoutMs: 500,
-          showEmptyFilters: false,
-          showSubResults: true,
-        });
-      });
-    </script> -->
-    <!-- <main class="home__main layout layout--lg">
-      <section>
-        <div id="loader">
-          <div class="grid is-col-min-8 is-gap-4">
-            <skeleton-loader count="4"></skeleton-loader>
-          </div>
-        </div>
-
-        <div
-          id="characters"
-          class="characters-grid grid is-col-min-8 is-gap-4"
-        ></div>
-
-        <div id="contact"></div>
-      </section>
-    </main> -->
-    <script type="module" src="./src/main.js"></script>
+  <body class="main-layout">
+    <section class="">
+      <banner-component>
+        <search-component></search-component>
+      </banner-component>
+    </section>
+    <script type="module" src="./src/components/search.js"></script>
+    <script type="module" src="./src/components/banner.js"></script>
   </body>
 </html>
