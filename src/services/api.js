@@ -1,6 +1,4 @@
-import { delay } from "../utils";
-
-const BASE_URL = "https://rickandmortyapi.com/api";
+const BASE_URL = 'https://rickandmortyapi.com/api';
 
 export const apiService = async (endpoint, options = {}) => {
   try {
@@ -8,7 +6,7 @@ export const apiService = async (endpoint, options = {}) => {
     const response = await fetch(`${BASE_URL}${endpoint}`, {
       ...options,
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
         ...options.headers,
       },
     });
@@ -19,7 +17,7 @@ export const apiService = async (endpoint, options = {}) => {
 
     return await response.json();
   } catch (error) {
-    console.error("API Request failed:", error);
+    console.error('API Request failed:', error);
     throw error;
   }
 };
