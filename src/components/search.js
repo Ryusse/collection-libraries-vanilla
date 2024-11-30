@@ -1,9 +1,9 @@
-import { LitElement, html, css } from "lit";
+import { LitElement, html, css } from 'lit';
 
-import { debounce } from "@/utils";
+import { debounce } from '@/utils';
 
-import "@/components/cards/character-card.js";
-import "@/components/no-results.js";
+import '@/components/cards/character-card.js';
+import '@/components/no-results.js';
 
 export class SearchComponent extends LitElement {
   static properties = {
@@ -18,7 +18,7 @@ export class SearchComponent extends LitElement {
     super();
     this.characters = [];
     this.loading = false;
-    this.searchTerm = "";
+    this.searchTerm = '';
     this.error = null;
     this.hasSearched = false;
     this.debouncedSearch = debounce(this.searchCharacters.bind(this), 2500);
@@ -87,20 +87,20 @@ export class SearchComponent extends LitElement {
 
     try {
       const response = await fetch(
-        `https://rickandmortyapi.com/api/character/?name=${encodeURIComponent(
-          this.searchTerm.trim()
-        )}`
+        `${import.meta.env.VITE_PUBLIC_AI}/character/?name=${encodeURIComponent(
+          this.searchTerm.trim(),
+        )}`,
       );
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || "Failed to fetch characters");
+        throw new Error(data.error || 'Failed to fetch characters');
       }
 
       this.characters = data.results || [];
       this.error = null;
     } catch (error) {
-      console.error("Error fetching characters:", error);
+      console.error('Error fetching characters:', error);
       this.error = error.message;
       this.characters = [];
     } finally {
@@ -139,7 +139,7 @@ export class SearchComponent extends LitElement {
           ${Array(6)
             .fill(0)
             .map(
-              () => html`<character-card .loading=${true}></character-card>`
+              () => html`<character-card .loading=${true}></character-card>`,
             )}
         </div>
       `;
@@ -167,7 +167,7 @@ export class SearchComponent extends LitElement {
         ${this.characters.map(
           (character) => html`
             <character-card .character=${character}></character-card>
-          `
+          `,
         )}
       </div>
     `;
@@ -189,4 +189,4 @@ export class SearchComponent extends LitElement {
   }
 }
 
-customElements.define("search-component", SearchComponent);
+customElements.define('search-component', SearchComponent);

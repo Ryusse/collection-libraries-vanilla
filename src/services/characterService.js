@@ -1,6 +1,6 @@
-import { apiService } from "./api";
+import { apiService } from './api';
 
-export const getCharacters = async (page = 1) => {
+export const getCharacters = async () => {
   const data = await apiService(`/character`);
   return data.results;
 };
