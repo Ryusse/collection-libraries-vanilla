@@ -7,9 +7,9 @@
   },
   "type": "module",
   "scripts": {
-    "dev": "tinacms dev -c vite",
+    "dev": "tinacms dev -c \"vite\"",
     "build": "tinacms build && vite build",
-    "preview": "\"tinacms build && vite preview"
+    "preview": "tinacms build && vite preview"
   },
   "devDependencies": {
     "@csstools/postcss-global-data": "^3.0.0",
