@@ -1,9 +1,7 @@
 .main-layout {
   padding-block-start: var(--size-fluid-5);
-  overflow-x: hidden;
   display: grid;
-  justify-items: flex-start;
-  grid-template-columns:var(--size-3) calc(100% - 2 * var(--size-3)) var(--size-3);
+  padding-inline: 1rem;
 
   @media (--md-n-above) {
     grid-template-columns: var(--size-8) calc(100% - 2* var(--size-8)) var(--size-8);

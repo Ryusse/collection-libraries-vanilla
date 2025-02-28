@@ -8,19 +8,23 @@ class LibraryListComponent extends LitElement {
     typography,
     css`
       :host {
-        width: 100%;
-
         section {
-          margin-top: 4rem;
+          padding-block: var(--size-8);
           display: grid;
           gap: 1rem;
-          grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+          grid-template-columns: 1fr;
           justify-content: center;
           align-items: center;
         }
 
+        @media (min-width: 600px) {
+          section {
+            grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+          }
+        }
+
         .skeleton-card {
-          min-height: 250px;
+          min-height: 316px;
           background-color: var(--border);
           border-radius: var(--radius-3);
           width: 100%;
@@ -48,7 +52,7 @@ class LibraryListComponent extends LitElement {
     super();
     this.libraries = [];
     this.errorMessage = "";
-    this.loading = true; // Inicializa loading como true
+    this.loading = true;
   }
 
   async firstUpdated() {
@@ -73,12 +77,12 @@ class LibraryListComponent extends LitElement {
       );
 
       console.log("libraries: ", this.libraries);
-      this.loading = false; // Cambia loading a false cuando los datos se cargan
+      this.loading = false;
     } catch (error) {
       console.error("Error fetching data:", error);
       this.errorMessage =
         "Error al cargar las bibliotecas. Por favor, inténtalo de nuevo más tarde.";
-      this.loading = false; // Cambia loading a false en caso de error
+      this.loading = false;
     }
   }
 

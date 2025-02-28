@@ -20,12 +20,14 @@ class LibraryCardComponent extends LitElement {
     css`
       :host {
         width: 100%;
+        max-width: 100%;
         height: 100%;
         display: flex;
 
         .library-card {
-          min-height: 250px;
           max-width: 100%;
+          width: 100%;
+          min-height: 250px;
           backdrop-filter: blur(32px);
           padding: 2rem;
           background-color: hsla(var(--card), 0.8);
@@ -34,7 +36,6 @@ class LibraryCardComponent extends LitElement {
           display: flex;
           gap: 1rem;
           flex-direction: column;
-          width: 100%;
 
           figure {
             margin: 0;
@@ -54,6 +55,8 @@ class LibraryCardComponent extends LitElement {
           }
 
           p {
+            width: 100%;
+            display: block;
             margin: 0;
             font-size: var(--font-size-2);
           }
