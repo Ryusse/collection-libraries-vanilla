@@ -18,18 +18,37 @@ class LibraryListComponent extends LitElement {
           justify-content: center;
           align-items: center;
         }
+
+        .skeleton-card {
+          min-height: 250px;
+          background-color: var(--border);
+          border-radius: var(--radius-3);
+          width: 100%;
+          animation: skeleton-loading 1.5s infinite alternate;
+        }
+
+        @keyframes skeleton-loading {
+          from {
+            opacity: 0.6;
+          }
+          to {
+            opacity: 1;
+          }
+        }
       }
     `,
   ];
 
   static properties = {
     libraries: { type: Array },
+    loading: { type: Boolean },
   };
 
   constructor() {
     super();
     this.libraries = [];
     this.errorMessage = "";
+    this.loading = true; // Inicializa loading como true
   }
 
   async firstUpdated() {
@@ -54,10 +73,12 @@ class LibraryListComponent extends LitElement {
       );
 
       console.log("libraries: ", this.libraries);
+      this.loading = false; // Cambia loading a false cuando los datos se cargan
     } catch (error) {
       console.error("Error fetching data:", error);
       this.errorMessage =
         "Error al cargar las bibliotecas. Por favor, inténtalo de nuevo más tarde.";
+      this.loading = false; // Cambia loading a false en caso de error
     }
   }
 
@@ -67,19 +88,25 @@ class LibraryListComponent extends LitElement {
         ? html`<div class="error-message">${this.errorMessage}</div>`
         : html`
             <section>
-              ${this.libraries.map(
-                (library) => html`
-                  <library-card-component
-                    id="${library.id}"
-                    slug="${library.slug}"
-                    title="${library.title}"
-                    siteUrl="${library.siteUrl}"
-                    shortDescription="${library.shortDescription}"
-                    authorName="${library.authorName}"
-                    authorUrl="${library.authorUrl}"
-                  ></library-card-component>
-                `,
-              )}
+              ${this.loading
+                ? html`
+                    ${Array(6)
+                      .fill(null)
+                      .map(() => html`<div class="skeleton-card"></div>`)}
+                  `
+                : this.libraries.map(
+                    (library) => html`
+                      <library-card-component
+                        id="${library.id}"
+                        slug="${library.slug}"
+                        title="${library.title}"
+                        siteUrl="${library.siteUrl}"
+                        shortDescription="${library.shortDescription}"
+                        authorName="${library.authorName}"
+                        authorUrl="${library.authorUrl}"
+                      ></library-card-component>
+                    `,
+                  )}
             </section>
           `}
     `;
