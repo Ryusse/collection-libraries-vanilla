@@ -5,6 +5,7 @@
 }
 
 .home__mesh-1 {
+  z-index: -1;
   position: absolute;
   top: 10rem;
   left: 50%;
@@ -12,6 +13,7 @@
 }
 
 .home__mesh-2 {
+  z-index: -1;
   position: absolute;
   top: 10rem;
   left: 50%;

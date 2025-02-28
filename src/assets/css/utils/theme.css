@@ -20,6 +20,8 @@
   --focus: var(--gray-10);
   --hover: var(--gray-3);
 
+  --warning: var(--yellow-8);
+
   --heading-font-family: var(--font-humanist);
   --body-font-family: var(--font-humanist);
 }
@@ -51,6 +53,8 @@
 
   --focus: var(--gray-10);
   --hover: 220, 3%, 19%;
+
+  --warning: var(--yellow-2);
 
   --heading-font-family: var(--font-humanist), sans-serif;
   --body-font-family: var(--font-humanist), sans-serif;

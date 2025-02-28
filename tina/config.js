@@ -29,15 +29,39 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
+        name: "libraries",
+        label: "Libraries",
+        path: "content/libraries",
         fields: [
           {
             type: "string",
             name: "title",
             label: "Title",
             isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "siteUrl",
+            label: "Site url",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "shortDescription",
+            label: "Short description",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "authorName",
+            label: "Author name",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "authorUrl",
+            label: "Author URL",
             required: true,
           },
           {
