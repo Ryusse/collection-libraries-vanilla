@@ -2,15 +2,17 @@
 @import "open-props/style";
 
 /* optional imports that use the props */
-@import "open-props/normalize";
+@import "open-props/normalize.min.css";
 @import "open-props/buttons";
 
 @import "open-props/media";
 
 /* just light or dark themes */
-@import "open-props/normalize/dark";
+/*@import "open-props/normalize/dark";*/
 @import "open-props/buttons/dark";
+/*
 @import "open-props/normalize/light";
+*/
 @import "open-props/buttons/light";
 
 /* individual imports */
@@ -23,9 +25,12 @@
 
 @import "./utils/index.css";
 @import "./layouts/index.css";
+@import "./base/index.css";
+@import "pages/home.css";
 
 html {
+  overflow-x: hidden;
   background-color: var(--background);
   color: var(--body-content);
-  font-family: var(--body-font-family);
+  font-family: var(--body-font-family), sans-serif;
 }

@@ -1,12 +1,19 @@
-import { LitElement, html, css } from 'lit';
+import { LitElement, html, css } from "lit";
 
-import { debounce } from '@/utils';
+import { debounce } from "@/utils";
 
-import '@/components/cards/character-card.js';
-import '@/components/no-results.js';
+import "@/components/cards/character-card.js";
+import "@/components/no-results.js";
+import { getTracks } from "../services";
+import { customElement } from "lit/decorators.js";
 
+const tracks = getTracks();
+console.log("tracks=>", tracks);
+
+@customElement("search-component")
 export class SearchComponent extends LitElement {
   static properties = {
+    tracks: { state: true },
     characters: { state: true },
     loading: { state: true },
     searchTerm: { state: true },
@@ -18,7 +25,7 @@ export class SearchComponent extends LitElement {
     super();
     this.characters = [];
     this.loading = false;
-    this.searchTerm = '';
+    this.searchTerm = "";
     this.error = null;
     this.hasSearched = false;
     this.debouncedSearch = debounce(this.searchCharacters.bind(this), 2500);
@@ -94,13 +101,13 @@ export class SearchComponent extends LitElement {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to fetch characters');
+        throw new Error(data.error || "Failed to fetch characters");
       }
 
       this.characters = data.results || [];
       this.error = null;
     } catch (error) {
-      console.error('Error fetching characters:', error);
+      console.error("Error fetching characters:", error);
       this.error = error.message;
       this.characters = [];
     } finally {
@@ -189,4 +196,4 @@ export class SearchComponent extends LitElement {
   }
 }
 
-customElements.define('search-component', SearchComponent);
+customElements.define("search-component", SearchComponent);

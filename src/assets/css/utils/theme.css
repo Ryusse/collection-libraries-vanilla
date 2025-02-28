@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light;
+
   --primary: var(--indigo-7);
   --primary-content: var(--indigo-1);
   --secondary: var(--indigo-4);
@@ -7,37 +9,49 @@
   --card-foground: var(--gray-10);
   --neutral: var(--gray-9);
   --neutral-content: var(--gray-1);
-  --body-content: var(--gray-7);
-  --heading-content: var(--gray-10);
-  --border: var(--gray-4);
+
+  --heading-content: var(--cyan-12);
+  --body-content: var(--gray-8);
+
   --background: var(--gray-1);
+  --border: var(--gray-4);
   --input: var(--gray-2);
   --input-content: var(--gray-8);
   --focus: var(--gray-10);
   --hover: var(--gray-3);
 
-  --body-font-family: var(--font-neo-grotesque);
+  --heading-font-family: var(--font-humanist);
+  --body-font-family: var(--font-humanist);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary: var(--indigo-7);
-    --primary-content: var(--indigo-1);
-    --secondary: var(--indigo-4);
-    --secondary-content: var(--indigo-1);
-    --card: var(--gray-3);
-    --card-foground: var(--gray-10);
-    --neutral: var(--gray-9);
-    --neutral-content: var(--gray-1);
-    --body-content: var(--gray-7);
-    --heading-content: var(--gray-10);
-    --border: var(--gray-4);
-    --background: var(--gray-1);
-    --input: var(--gray-2);
-    --input-content: var(--gray-8);
-    --focus: var(--gray-10);
-    --hover: var(--gray-3);
+[color-scheme="dark"] {
+  color-scheme: dark;
 
-    --body-font-family: var(--font-neo-grotesque);
-  }
+  --primary: var(--indigo-0);
+  --primary-content: var(--indigo-1);
+
+  --secondary: var(--indigo-4);
+  --secondary-content: var(--indigo-1);
+
+  --card: 210, 7%, 11%;
+  --card-foground: var(--gray-1);
+
+  --neutral: var(--gray-9);
+  --neutral-content: var(--gray-1);
+
+  --heading-content: var(--gray-1);
+  --body-content: #ABACAC;
+
+  --background: #161616;
+  --border: #303133;
+
+  --input: var(--gray-2);
+
+  --input-content: var(--gray-8);
+
+  --focus: var(--gray-10);
+  --hover: 220, 3%, 19%;
+
+  --heading-font-family: var(--font-humanist), sans-serif;
+  --body-font-family: var(--font-humanist), sans-serif;
 }

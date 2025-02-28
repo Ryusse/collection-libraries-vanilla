@@ -5,16 +5,47 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/assets/css/main.css" />
-    <title>Collection libraries vanilla</title>
+    <title>Awesome Javascript UI</title>
+    <meta name="description" content="A collection of vanilla UI javascript libraries"/>
   </head>
-  <body class="main-layout">
-    <section class="">
-      <banner-component>
-        <search-component></search-component>
-      </banner-component>
-    </section>
-    <script type="module" src="./src/components/search.js"></script>
+  <body>
+  <svg class="home__mesh-1" width="640" height="614" viewBox="0 0 640 614" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.16" filter="url(#filter0_f_2_59)">
+      <circle cx="320" cy="294" r="160" fill="#F5E774"/>
+    </g>
+    <defs>
+      <filter id="filter0_f_2_59" x="0" y="-26" width="640" height="640" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feGaussianBlur stdDeviation="80" result="effect1_foregroundBlur_2_59"/>
+      </filter>
+    </defs>
+  </svg>
+  
+  <svg class="home__mesh-2" width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.16" filter="url(#filter0_f_106_3)">
+      <circle cx="400" cy="400" r="240" fill="#05A3E7"/>
+    </g>
+    <defs>
+      <filter id="filter0_f_106_3" x="0" y="0" width="800" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feGaussianBlur stdDeviation="80" result="effect1_foregroundBlur_106_3"/>
+      </filter>
+    </defs>
+  </svg>
+  
+  
+  <header-component>
+    <theme-switcher slot="theme-switcher"></theme-switcher>
+  </header-component>
+   <main class="main-layout">
+     <banner-component></banner-component>
+     <library-list-component></library-list-component>
+   </main>
     <script type="module" src="./src/components/banner.js"></script>
-    <script type="module" src="./src/services/characterService.js"></script>
+    <script type="module" src="./src/components/theme-switcher.js"></script>
+    <script type="module" src="./src/components/header.js"></script>
+    <script type="module" src="./src/components/library-list.js"></script>
   </body>
 </html>

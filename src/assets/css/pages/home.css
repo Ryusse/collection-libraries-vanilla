@@ -1,0 +1,29 @@
+.home {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.home__mesh-1 {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.home__mesh-2 {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.home__radial-gradient-overlay {
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  height: 100vh; /* Equivalente a h-screen */
+  width: 100vw; /* Equivalente a w-screen */
+  background-image: radial-gradient(#ffffff33 1px, #00091d 1px); /* Equivalente a bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] */
+  background-size: 20px 20px; /* Equivalente a bg-[size:20px_20px] */
+}

@@ -1,0 +1,8 @@
+
+.heading-01 {
+  color: var(--heading-content);
+  line-height: var(--font-lineheight-1);
+  font-size: var(--font-size-fluid-);
+  font-weight: var(--font-weight-9);
+  font-family: var(--font-sans);
+}

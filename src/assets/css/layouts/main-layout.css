@@ -1,5 +1,5 @@
 .main-layout {
-  padding-block-start: var(--size-fluid-2);
+  padding-block-start: var(--size-fluid-5);
   overflow-x: hidden;
   display: grid;
   justify-items: flex-start;
