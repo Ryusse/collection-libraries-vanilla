@@ -31,7 +31,7 @@ export default defineConfig({
       {
         name: "libraries",
         label: "Libraries",
-        path: "content/libraries",
+        path: "src/content/libraries",
         fields: [
           {
             type: "string",

@@ -62,8 +62,9 @@ class LibraryListComponent extends LitElement {
   async fetchData() {
     try {
       const librariesResponse = await client.queries.librariesConnection();
-      this.libraries = librariesResponse.data.librariesConnection.edges.map(
-        (library) => {
+      this.libraries = librariesResponse.data.librariesConnection.edges
+        .filter((library) => library.node._sys.relativePath.startsWith(`en/`))
+        .map((library) => {
           return {
             id: library.node.id,
             slug: library.node._sys.filename,
@@ -73,10 +74,9 @@ class LibraryListComponent extends LitElement {
             authorName: library.node.authorName,
             authorUrl: library.node.authorUrl,
           };
-        },
-      );
+        });
 
-      console.log("libraries: ", this.libraries);
+      console.log("libraries: ", this.libraries[1].slug.toLocaleLowerCase());
       this.loading = false;
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -101,7 +101,7 @@ class LibraryListComponent extends LitElement {
                 : this.libraries.map(
                     (library) => html`
                       <library-card-component
-                        id="${library.id}"
+                        id="${library.slug.toLocaleLowerCase()}"
                         slug="${library.slug}"
                         title="${library.title}"
                         siteUrl="${library.siteUrl}"

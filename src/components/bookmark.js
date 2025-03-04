@@ -1,6 +1,13 @@
 import { LitElement, html, css } from "lit";
 import { button } from "@/assets/css/base/button.js";
 
+/*
+Este componente guarda en el local storage las bibliotecas al darle click. Se implementó una feature para manejar dos idiomas desde
+TinaCMS. Al guardarse cada biblioteca en el local storage se guarda el "id" de TinaCMS que es: "src/content/libraries/es/Micromodaljs.md", notar
+que este "id" es una ruta y da problemas ya que se estan creando dos archivos de una biblioteca por cada idioma y ocasiona que el usuario necesite guardarlo
+dos veces al cambiar de idioma. Se recomienda crear un nuevo campo en el schema "Libarary" que contenga un id único compartido para ambos documentos generados.
+*/
+
 class BookmarkComponent extends LitElement {
   static properties = {
     id: { type: String },
@@ -42,12 +49,17 @@ class BookmarkComponent extends LitElement {
   }
 
   loadBookmarks() {
-    const savedBookmarks = localStorage.getItem("bookmarks");
+    const savedBookmarks = localStorage.getItem(
+      "awesome-javascript-ui-bookmarks",
+    );
     return savedBookmarks ? JSON.parse(savedBookmarks) : [];
   }
 
   saveBookmarks(bookmarks) {
-    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+    localStorage.setItem(
+      "awesome-javascript-ui-bookmarks",
+      JSON.stringify(bookmarks),
+    );
   }
 
   handleClick() {
