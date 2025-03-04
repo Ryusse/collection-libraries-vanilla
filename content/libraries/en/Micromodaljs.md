@@ -2,8 +2,8 @@
 title: Micromodal.js
 siteUrl: 'https://micromodal.vercel.app/'
 shortDescription: >-
-  Micromodal.js es una librería modal ligera, configurable y compatible con a11y
-  escrita en JavaScript puro
+  Micromodal.js is a lightweight, configurable and a11y-enabled modal library
+  written in pure JavaScript
 authorName: Indrashish Ghosh
 authorUrl: 'https://github.com/ghosh'
 ---

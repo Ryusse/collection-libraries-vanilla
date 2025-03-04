@@ -17,6 +17,12 @@ class LibraryListComponent extends LitElement {
           align-items: center;
         }
 
+        .error-message {
+          text-align: center;
+          margin-block: var(--size-10);
+          font-size: var(--size-4);
+        }
+
         @media (min-width: 600px) {
           section {
             grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
