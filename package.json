@@ -1,6 +1,6 @@
 {
-  "name": "collection-libraries-vanilla",
-  "private": true,
+  "name": "awesome-javascript-ui",
+  "private": false,
   "version": "0.1.0",
   "author": {
     "name": "Joel Ocaño"
