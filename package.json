@@ -29,5 +29,6 @@
     "open-props": "^1.7.7",
     "tinacms": "^2.7.2",
     "vite-plugin-purgecss": "^0.2.12"
-  }
+  },
+  "packageManager": "pnpm@9.1.1+sha1.09ada6cd05003e0ced25fb716f9fda4063ec2e3b"
 }
