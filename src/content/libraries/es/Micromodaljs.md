@@ -1,5 +1,5 @@
 ---
-title: Micromodal.js
+title: Micromodal
 siteUrl: 'https://micromodal.vercel.app/'
 shortDescription: >-
   Micromodal.js es una librería modal ligera, configurable y compatible con a11y
